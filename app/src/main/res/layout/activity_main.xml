@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/pearlGray"
     android:id="@+id/swipeRefreshLayout"
-    tools:context=".MainActivity">
+    tools:context=".ui.view.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
