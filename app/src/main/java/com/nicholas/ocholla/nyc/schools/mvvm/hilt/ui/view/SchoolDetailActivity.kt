@@ -210,8 +210,8 @@ class SchoolDetailActivity : AppCompatActivity() {
     }
 
     private fun openSchoolScores() {
-        //val intent = Intent(this, ScoresActivity::class.java)
-        //startActivity(intent)
+        val intent = Intent(this, ScoresActivity::class.java)
+        startActivity(intent)
     }
 
     companion object {
