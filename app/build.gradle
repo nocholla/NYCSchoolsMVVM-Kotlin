@@ -33,12 +33,27 @@ android {
 }
 
 dependencies {
+    implementation "androidx.core:core-ktx:$rootProject.coreKtxVersion"
+    implementation "androidx.appcompat:appcompat:$rootProject.appcompatVersion"
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintlayoutVersion"
+    implementation "androidx.recyclerview:recyclerview:$rootProject.recyclerviewVersion"
+    implementation "androidx.cardview:cardview:$rootProject.cardviewVersion"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$rootProject.swiperefreshVersion"
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.0'
-    implementation 'com.google.android.material:material:1.7.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    // JUnit
+    testImplementation "junit:junit:$rootProject.junitVersion"
+
+    // Mockito
+    testImplementation "org.mockito:mockito-inline:$rootProject.mockitoInlineVersion"
+    testImplementation "org.mockito:mockito-core:$rootProject.mockitoCoreVersion"
+    androidTestImplementation "org.mockito:mockito-android:$rootProject.mockitoAndroidVersion"
+
+    // Arch
+    testImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
+    androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
+
+    // Support
+    androidTestImplementation "com.android.support.test:runner:$rootProject.testRunnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
 }

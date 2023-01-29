@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/pearlGray">
+
+    <ImageButton
+        android:id="@+id/ib_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/global_space_medium"
+        android:layout_marginEnd="@dimen/global_space_medium"
+        android:layout_weight="4"
+        android:background="@color/transparent"
+        android:src="@drawable/ic_close"
+        android:visibility="visible"
+        tools:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:id="@+id/more_account_and_support_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/toolbar_margin_top"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_new_york_city_schools"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="@dimen/global_space_large"
+                android:layout_marginHorizontal="@dimen/global_space_small"
+                android:src="@drawable/placeholder_new_york_schools"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_social"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/global_space_large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_new_york_city_schools">
+
+                <TextView
+                    android:id="@+id/tv_feedback_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share"
+                    android:visibility="gone"
+                    android:textAppearance="@style/TextAppearance_Body2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_share"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_marginTop="@dimen/global_space_medium"
+                    android:layout_marginEnd="@dimen/global_space_large"
+                    app:cardBackgroundColor="@color/primaryBlue"
+                    app:cardCornerRadius="@dimen/global_space_small"
+                    app:layout_constraintEnd_toStartOf="@+id/card_social"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_feedback_title">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_small"
+                        android:layout_height="@dimen/icon_size_small"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        app:srcCompat="@drawable/ic_share"
+                        app:tint="@color/white" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_social"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_marginTop="@dimen/global_space_medium"
+                    app:cardBackgroundColor="@color/primaryBlue"
+                    app:cardCornerRadius="@dimen/global_space_small"
+                    app:layout_constraintStart_toStartOf="@+id/tv_feedback_title"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_feedback_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_feedback_title">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_small"
+                        android:layout_height="@dimen/icon_size_small"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        app:srcCompat="@drawable/ic_social"
+                        app:tint="@color/white" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_website"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_marginStart="@dimen/global_space_large"
+                    android:layout_marginTop="@dimen/global_space_medium"
+                    app:cardBackgroundColor="@color/primaryBlue"
+                    app:cardCornerRadius="@dimen/global_space_small"
+                    app:layout_constraintStart_toEndOf="@+id/card_social"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_feedback_title">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_small"
+                        android:layout_height="@dimen/icon_size_small"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        app:srcCompat="@drawable/ic_website"
+                        app:tint="@color/white" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/feedback"
+                    android:textAppearance="@style/TextAppearance_Micro2"
+                    app:layout_constraintStart_toStartOf="@+id/card_share"
+                    app:layout_constraintEnd_toEndOf="@+id/card_share"
+                    app:layout_constraintTop_toBottomOf="@+id/card_share" />
+
+                <TextView
+                    android:id="@+id/tv_social"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/social"
+                    android:textAppearance="@style/TextAppearance_Micro2"
+                    app:layout_constraintStart_toStartOf="@+id/card_social"
+                    app:layout_constraintEnd_toEndOf="@+id/card_social"
+                    app:layout_constraintTop_toBottomOf="@+id/card_social" />
+
+                <TextView
+                    android:id="@+id/tv_website"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/website"
+                    android:textAppearance="@style/TextAppearance_Micro2"
+                    app:layout_constraintStart_toStartOf="@+id/card_website"
+                    app:layout_constraintEnd_toEndOf="@+id/card_website"
+                    app:layout_constraintTop_toBottomOf="@+id/card_website" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- School Name -->
+            <TextView
+                android:id="@+id/tv_school_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/global_space_xlarge"
+                android:textAppearance="@style/TextAppearance_Body2_LatoBlack"
+                android:text="@string/school_name"
+                android:gravity="start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_social" />
+
+            <TextView
+                android:id="@+id/tv_school_name_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/global_space_small"
+                android:textAppearance="@style/TextAppearance_Body2"
+                android:gravity="start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_school_name"
+                tools:text="Clinton School Writers and Artists, M.S. 260"/>
+
+            <!-- Overview -->
+            <TextView
+                android:id="@+id/tv_overview_paragraph"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/global_space_medium"
+                android:textAppearance="@style/TextAppearance_Body2_LatoBlack"
+                android:text="@string/overview"
+                android:gravity="start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_school_name_content" />
+
+            <TextView
+                android:id="@+id/tv_overview_paragraph_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/global_space_small"
+                android:textAppearance="@style/TextAppearance_Body2"
+                android:gravity="start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_overview_paragraph"
+                tools:text="Brooklyn School for Music Theatre (BSMT) uses our academic program to accommodate the intellectual, social, and emotional needs of creative high school students. Our vision is to provide a model professional environment where respect is mutual, ideas are shared, and learning is not limited to the classroom. We prepare students for higher education through our rigorous academic program while simultaneously allowing them to develop professional careers in the music and theatre industries."/>
+
+            <!-- Location -->
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/global_space_medium"
+                android:textAppearance="@style/TextAppearance_Body2_LatoBlack"
+                android:text="@string/location"
+                android:gravity="start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_overview_paragraph_content" />
+
+            <TextView
+                android:id="@+id/tv_location_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/global_space_small"
+                android:textAppearance="@style/TextAppearance_Body2"
+                android:gravity="start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_location"
+                tools:text="2865 West 19th Street, Brooklyn, NY 11224 (40.576976, -73.985413)"/>
+
+            <!-- Phone -->
+            <TextView
+                android:id="@+id/tv_phone_classes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/global_space_medium"
+                android:textAppearance="@style/TextAppearance_Body2_LatoBlack"
+                android:text="@string/phone"
+                android:gravity="start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_location_content" />
+
+            <TextView
+                android:id="@+id/tv_phone_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/global_space_small"
+                android:textAppearance="@style/TextAppearance_Body2"
+                android:gravity="start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_phone_classes"
+                tools:text="718-542-0740"/>
+
+            <!-- Email -->
+            <TextView
+                android:id="@+id/tv_email_courses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/global_space_medium"
+                android:textAppearance="@style/TextAppearance_Body2_LatoBlack"
+                android:text="@string/email"
+                android:gravity="start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_phone_content" />
+
+            <TextView
+                android:id="@+id/tv_email_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/global_space_small"
+                android:layout_marginBottom="@dimen/global_space_large"
+                android:textAppearance="@style/TextAppearance_Body2"
+                android:gravity="start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email_courses"
+                tools:text="sburns@schools.nyc.gov"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_Spacer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/global_space_medium"
+                app:layout_constraintTop_toBottomOf="@id/tv_email_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <Space
+                    android:id="@+id/marginSpacer"
+                    android:layout_width="0dp"
+                    android:layout_height="5dp"
+                    android:layout_margin="1dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_school_scores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:theme="@style/PrimaryActionButton"
+        android:elevation="5dp"
+        app:backgroundTint="@color/primaryBlue"
+        app:elevation="5dp"
+        app:pressedTranslationZ="0dp"
+        app:srcCompat="@drawable/ic_airplane"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="VectorDrawableCompat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
