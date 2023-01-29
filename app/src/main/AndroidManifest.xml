@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NYCSchools"
         tools:targetApi="31">
+
         <activity
             android:name=".ui.view.MainActivity"
             android:exported="true">
@@ -28,6 +29,10 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <activity android:name=".ui.view.SchoolDetailActivity" />
+        <activity android:name=".ui.view.ScoresActivity" />
+
     </application>
 
 </manifest>
