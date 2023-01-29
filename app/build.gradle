@@ -50,7 +50,7 @@ dependencies {
 
     //Dagger
     implementation "com.google.dagger:hilt-android:$rootProject.daggerHiltAndroidVersion"
-    kapt "com.google.dagger:hilt-android-compiler:$rootProject.daggerHiltAndroidCompilerVersion"
+    annotationProcessor "com.google.dagger:hilt-android-compiler:$rootProject.daggerHiltAndroidCompilerVersion"
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:$rootProject.hiltLifeCycleViewmodelVersion"
     kapt "androidx.hilt:hilt-compiler:$rootProject.hiltCompilerVersion"
 
