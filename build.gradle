@@ -1,4 +1,17 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.7.20'
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.43.2"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
 plugins {
     id 'com.android.application' version '7.3.1' apply false
     id 'com.android.library' version '7.3.1' apply false
@@ -21,11 +34,21 @@ ext {
     cardviewVersion = '1.0.0'
     swiperefreshVersion = '1.1.0'
 
-    lifeCycleExtensionsVersion = '2.1.0'
-    supportVersion = '28.0.0'
+    // Dagger
+    daggerHiltAndroidVersion = '2.43.2'
+    daggerHiltAndroidCompilerVersion = '2.33-beta'
+    hiltLifeCycleViewmodelVersion = '1.0.0-alpha03'
+    hiltCompilerVersion = '1.0.0'
+
+    // Networking
+    retrofitConverterMoshiVersion = "2.6.2"
     retrofitVersion = "2.9.0"
-    daggerVersion = '2.13'
-    rxJavaVersion = '2.0.1'
+    okhttpVersion = "4.9.3"
+    okhttpLoggingInterceptorVersion = "4.9.3"
+
+    // Coroutine
+    coroutinesAndroidVersion = '1.6.4'
+    coroutinesCoreVersion = '1.6.4'
 
     junitVersion = '4.13.2'
     testJunitVersion = '1.1.5'
