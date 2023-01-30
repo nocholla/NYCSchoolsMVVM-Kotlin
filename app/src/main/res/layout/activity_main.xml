@@ -14,7 +14,7 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/schoolsList"
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/global_space_large"
@@ -22,10 +22,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
             tools:listitem="@layout/item_school" />
 
         <TextView
-            android:id="@+id/list_error"
+            android:id="@+id/tvError"
             android:layout_width="0dp"
             android:layout_height="0dp"
             style="@style/TextAppearance_Body2"
@@ -43,7 +44,7 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
 
         <ProgressBar
-            android:id="@+id/loading_view"
+            android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/global_space_small"

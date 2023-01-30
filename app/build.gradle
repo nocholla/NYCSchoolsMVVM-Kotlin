@@ -48,6 +48,9 @@ dependencies {
     implementation "androidx.cardview:cardview:$rootProject.cardviewVersion"
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:$rootProject.swiperefreshVersion"
 
+    // View Models
+    implementation "androidx.fragment:fragment-ktx:$rootProject.fragmentKtxVersion"
+
     // Lifecycle
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-common-java8:$rootProject.lifecycleVersion"
