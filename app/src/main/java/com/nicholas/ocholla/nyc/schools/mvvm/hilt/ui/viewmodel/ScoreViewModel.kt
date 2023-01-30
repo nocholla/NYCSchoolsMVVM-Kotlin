@@ -8,7 +8,7 @@ import com.nicholas.ocholla.nyc.schools.mvvm.hilt.util.NetworkHelper
 import com.nicholas.ocholla.nyc.schools.mvvm.hilt.util.Resource
 import kotlinx.coroutines.launch
 
-class ScoresViewModel @ViewModelInject constructor(
+class ScoreViewModel @ViewModelInject constructor(
     private val mainRepository: MainRepository,
     private val networkHelper: NetworkHelper
 ) : ViewModel() {
