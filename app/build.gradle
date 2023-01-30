@@ -48,6 +48,12 @@ dependencies {
     implementation "androidx.cardview:cardview:$rootProject.cardviewVersion"
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:$rootProject.swiperefreshVersion"
 
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$rootProject.lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$rootProject.lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-process:$rootProject.lifecycleVersion"
+
     //Dagger
     implementation "com.google.dagger:hilt-android:$rootProject.daggerHiltAndroidVersion"
     annotationProcessor "com.google.dagger:hilt-android-compiler:$rootProject.daggerHiltAndroidCompilerVersion"

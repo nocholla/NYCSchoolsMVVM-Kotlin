@@ -34,6 +34,9 @@ ext {
     cardviewVersion = '1.0.0'
     swiperefreshVersion = '1.1.0'
 
+    // Lifecycle
+    lifecycleVersion = '2.5.1'
+
     // Dagger
     daggerHiltAndroidVersion = '2.28-alpha'
     daggerHiltAndroidCompilerVersion = '2.28-alpha'
