@@ -1,5 +1,7 @@
 package com.nicholas.ocholla.nyc.schools.mvvm.hilt.ui.view
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -30,6 +32,12 @@ class MainActivity : AppCompatActivity() {
             )
         )
         recyclerView.adapter = adapter
+    }
+
+    companion object {
+        val TAG = "MainActivity"
+
+        fun newIntent(context: Context) = Intent(context, MainActivity::class.java)
     }
 
 }
