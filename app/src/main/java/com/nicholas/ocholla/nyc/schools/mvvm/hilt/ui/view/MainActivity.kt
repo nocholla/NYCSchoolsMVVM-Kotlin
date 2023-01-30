@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                     recyclerView.visibility = View.GONE
                 }
                 Status.ERROR -> {
-                    //Handle Error
+                    // Handle Error
                     progressBar.visibility = View.GONE
                     tvError.visibility = View.VISIBLE
                     Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()

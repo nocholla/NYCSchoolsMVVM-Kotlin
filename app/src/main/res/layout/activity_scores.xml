@@ -28,10 +28,11 @@
             app:layout_constraintEnd_toEndOf="parent"/>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/scoresList"
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/toolbar_margin_top_large"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +40,7 @@
             tools:listitem="@layout/item_score" />
 
         <TextView
-            android:id="@+id/list_error"
+            android:id="@+id/tvError"
             android:layout_width="0dp"
             android:layout_height="0dp"
             style="@style/TextAppearance_Body2"
@@ -57,7 +58,7 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
 
         <ProgressBar
-            android:id="@+id/loading_view"
+            android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/global_space_small"
