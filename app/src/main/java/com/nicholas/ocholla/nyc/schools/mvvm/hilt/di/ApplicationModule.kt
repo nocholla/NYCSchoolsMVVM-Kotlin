@@ -4,18 +4,13 @@ import com.nicholas.ocholla.nyc.schools.mvvm.hilt.BuildConfig
 import com.nicholas.ocholla.nyc.schools.mvvm.hilt.data.api.ApiHelper
 import com.nicholas.ocholla.nyc.schools.mvvm.hilt.data.api.ApiHelperImpl
 import com.nicholas.ocholla.nyc.schools.mvvm.hilt.data.api.ApiService
-import dagger.Module
 import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
 
-@Module
-@InstallIn(ApplicationComponent::class)
 class ApplicationModule {
 
     @Provides
